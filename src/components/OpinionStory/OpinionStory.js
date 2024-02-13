@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
+import { QUERIES } from "../../constants";
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
@@ -17,6 +18,18 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 1fr 48px;
+  grid-template-areas: "content avatar";
+
+  @media ${QUERIES.tabletOnly} {
+    grid-template-columns: none;
+    grid-template-rows: 48px 1fr;
+    grid-template-areas:
+      "avatar"
+      "content";
+  }
 `;
 
 const Avatar = styled.img`
@@ -25,6 +38,7 @@ const Avatar = styled.img`
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  grid-area: avatar;
 `;
 
 const AuthorName = styled.p`
@@ -32,6 +46,7 @@ const AuthorName = styled.p`
   font-weight: var(--font-weight-medium);
   color: var(--color-gray-700);
   margin-bottom: 4px;
+  grid-area: content;
 `;
 
 const ArticleTitle = styled.h3`
