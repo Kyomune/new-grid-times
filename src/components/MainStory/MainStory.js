@@ -45,12 +45,11 @@ const Abstract = styled.p`
   overflow: hidden;
 
   @media ${QUERIES.tabletAndUp} {
-    -webkit-line-clamp: calc(var(--lines-clamp) * 2 );
+    -webkit-line-clamp: calc(var(--lines-clamp) * 1.5 );
   }
 
   @media ${QUERIES.laptopAndUp} { 
-    display: revert;
-    overflow: initial;
+    -webkit-line-clamp: calc( ( var(--lines-clamp) * 1 ) - 1 );
   }
 `;
 

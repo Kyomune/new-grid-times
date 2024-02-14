@@ -39,6 +39,10 @@ const Avatar = styled.img`
   border-radius: 50%;
   object-fit: cover;
   grid-area: avatar;
+
+  @media not(${QUERIES.tabletOnly}) { 
+    margin-left: 16px;
+  }  
 `;
 
 const AuthorName = styled.p`

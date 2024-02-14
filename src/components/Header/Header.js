@@ -99,6 +99,10 @@ const MainHeader = styled(MaxWidthWrapper)`
     margin-top: 16px;
     margin-bottom: 72px;
   }
+
+  @media ${QUERIES.tabletOnly} {
+    justify-content: center;
+  }
 `;
 
 const DesktopActionGroup = styled(ActionGroup)`
