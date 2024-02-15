@@ -81,7 +81,7 @@ const ActionGroup = styled.div`
 const MainHeader = styled(MaxWidthWrapper)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
 
@@ -98,10 +98,7 @@ const MainHeader = styled(MaxWidthWrapper)`
     justify-items: start;
     margin-top: 16px;
     margin-bottom: 72px;
-  }
-
-  @media ${QUERIES.tabletOnly} {
-    justify-content: center;
+    justify-content: space-between;
   }
 `;
 
